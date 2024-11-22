@@ -1,0 +1,129 @@
+/* page2.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://img.freepik.com/free-photo/abstract-geometric-border-connecting-dots-digital-technology-vector-design_53876-160260.jpg?t=st=1730972875~exp=1730976475~hmac=fd4f763f7e0019895bbabe0c32f80b4ea6dd1836bafa58598dba4aa736d7f0d8&w=1380);
+   ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.page {
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.active {
+    display: block;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 25px;
+    background: #00ff88;
+    color: #1a1a2e;
+    cursor: pointer;
+    margin: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+}
+
+.difficulty-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.typing-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 16px;
+    margin: 2rem 0;
+}
+
+.timer {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00ff88;
+}
+
+#typing-input {
+    height: 100px;
+    width: 1000px;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+}
+
+#typing-input:focus {
+    outline: none;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+.text-display {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.text-display span {
+    position: relative;
+}
+
+.text-display span.correct {
+    color: #00ff88;
+}
+
+.text-display span.incorrect {
+    color: #ff4444;
+    text-decoration: underline;
+}
+
+.text-display span.current {
+    background-color: rgba(0, 255, 136, 0.2);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

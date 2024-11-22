@@ -1,0 +1,31 @@
+<!-- page2.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Typing Test - Difficulty Selection</title>
+    <link rel="stylesheet" href="page2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page active" id="page2">
+            <h1>Selelct Difficulty</h1>
+            <div class="difficulty-container">
+                <button class="btn" onclick="setDifficulty('beginner')">Beginner</button>
+                <button class="btn" onclick="setDifficulty('medium')">Medium</button>
+                <button class="btn" onclick="setDifficulty('high')">High</button>
+            </div>
+            <div class="typing-container" style="display: none;">
+
+                <div class="timer">0</div>
+                <div class="text-display"></div>
+                <textarea id="typing-input" rows="10"></textarea>
+                <button class="btn" onclick="submitTest()">Submit Test</button>
+            </div>
+        </div>
+    </div>
+    <script src="shared.js"></script>
+    <script src="page2.js"></script>
+</body>
+</html>

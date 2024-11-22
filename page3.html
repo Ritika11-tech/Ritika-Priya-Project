@@ -1,0 +1,30 @@
+<!-- page3.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Typing Test - Results</title>
+    <link rel="stylesheet" href="page3.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page active" id="page3">
+            <h1>Test Results</h1>
+            <div class="result">
+                <p>Words Per Minute: <span id="wpm">0</span></p>
+                <p>Accuracy: <span id="accuracy">0</span>%</p>
+                <p>Time Taken: <span id="timeTaken">0</span> seconds</p>
+                <div id="congratulations"></div>
+            </div>
+            <button class="btn" onclick="viewRecords()">View Records</button>
+            <form action="./page2.html" method="post">
+                <button class="btn" >Try Again</button>
+            </form>
+            
+        </div>
+    </div>
+    <script src="shared.js"></script>
+    <script src="page3.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0a0a0a;
+      color: #fff;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .title {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      opacity: 0;
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    .typing-text {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid #fff;
+      animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+
+    .developers {
+      font-size: 2.5rem;
+      margin-top: 2rem;
+      opacity: 0;
+      animation: slideUp 1s ease-out 1s forwards;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: #00ff88;
+    }
+
+    
+
+    .enter-button {
+      margin-top: 3rem;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      background: linear-gradient(45deg, #00ff88, #00a3ff);
+      border: none;
+      border-radius: 30px;
+      color: #fff;
+      cursor: pointer;
+      opacity: 0;
+      animation: fadeIn 1s ease-out 2s forwards;
+      transition: transform 0.3s ease;
+    }
+
+    .enter-button:hover {
+      transform: scale(1.1);
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(https://img.freepik.com/free-vector/abstract-blue-light-pipe-speed-zoom-black-background-technology_1142-8392.jpg?semt=ais_hybrid);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 0;
+    }
+
+    .grid {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(rgba(50, 50, 50, 0.1) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(50, 50, 50, 0.1) 1px, transparent 1px);
+      background-size: 30px 30px;
+      z-index: 0;
+      animation: gridMove 20s linear infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #fff }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes gridMove {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(30px); }
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="grid"></div>
+  
+  <div class="stickers">
+    <div class="sticker1">⌨️</div>
+    <div class="sticker2">🚀</div>
+    <div class="sticker3">⚡</div>
+    <div class="sticker4">💻</div>
+  </div>
+
+  <div class="container">
+    <h1 class="title">
+      <span class="typing-text">Typing Speed Tester</span>
+    </h1>
+    <div class="developers">
+      Developed by Ritika & Priya
+    </div>
+    <form action="./page1.html" method="post">
+        <button class="enter-button">Enter Test ➜</button>
+    </form>
+    
+
+
+  </div>
+</body>
+</html>
