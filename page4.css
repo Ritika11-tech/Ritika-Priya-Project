@@ -20,7 +20,6 @@ body {
 
 .container {
     max-width: 1200px;
-    width: 100%;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
@@ -89,7 +88,6 @@ h3 {
     padding: 2rem;
     border-radius: 16px;
     min-width: 250px;
-    flex: 1;
     transition: all 0.3s ease;
 }
 
@@ -109,14 +107,12 @@ h3 {
     border-radius: 16px;
     margin-top: 2rem;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
-    min-width: 600px;
 }
 
 th, td {
@@ -138,116 +134,4 @@ tr:hover {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-/* Media Queries for Mobile Responsiveness */
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 1rem;
-    }
-
-    h1 {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-    }
-
-    h2 {
-        font-size: 1.6rem;
-    }
-
-    h3 {
-        font-size: 1.3rem;
-    }
-
-    .btn {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
-        margin: 0.5rem;
-    }
-
-    .stats-container {
-        gap: 1rem;
-    }
-
-    .stat-card {
-        padding: 1.5rem;
-        min-width: 200px;
-    }
-
-    .stat-card p {
-        font-size: 1rem;
-    }
-
-    .records-table {
-        padding: 1rem;
-    }
-
-    th, td {
-        padding: 0.8rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    h2 {
-        font-size: 1.3rem;
-    }
-
-    h3 {
-        font-size: 1.1rem;
-    }
-
-    .btn {
-        width: 90%;
-        margin: 0.5rem auto;
-    }
-
-    .stat-card {
-        min-width: 100%;
-        padding: 1rem;
-    }
-
-    .records-table {
-        margin: 1rem -1rem;
-        border-radius: 0;
-    }
-
-    table {
-        font-size: 0.9rem;
-    }
-
-    th, td {
-        padding: 0.6rem;
-    }
-}
-
-/* Improve table scrolling on mobile */
-@media screen and (max-width: 600px) {
-    .records-table {
-        margin-left: -1rem;
-        margin-right: -1rem;
-        border-radius: 0;
-    }
-
-    .records-table::before,
-    .records-table::after {
-        content: '';
-        position: absolute;
-        width: 10px;
-        height: 100%;
-        top: 0;
-    }
-
-    .records-table::before {
-        left: 0;
-        background: linear-gradient(to right, rgba(0,0,0,0.15), transparent);
-    }
-
-    .records-table::after {
-        right: 0;
-        background: linear-gradient(to left, rgba(0,0,0,0.15), transparent);
-    }
 }
