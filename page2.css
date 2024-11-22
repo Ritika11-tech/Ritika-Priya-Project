@@ -13,7 +13,6 @@ body {
     justify-content: center;
     align-items: center;
     background-image: url(https://img.freepik.com/free-photo/abstract-geometric-border-connecting-dots-digital-technology-vector-design_53876-160260.jpg?t=st=1730972875~exp=1730976475~hmac=fd4f763f7e0019895bbabe0c32f80b4ea6dd1836bafa58598dba4aa736d7f0d8&w=1380);
-   ;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -80,7 +79,8 @@ h1 {
 
 #typing-input {
     height: 100px;
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     font-size: 1.2rem;
     font-style: normal;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -126,4 +126,65 @@ h1 {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        margin: 0.5rem;
+    }
+
+    .difficulty-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .typing-container {
+        padding: 1rem;
+    }
+
+    .timer {
+        font-size: 1.5rem;
+    }
+
+    #typing-input {
+        height: 80px;
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .text-display {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        width: 90%;
+        margin: 0.5rem auto;
+    }
+
+    #typing-input {
+        height: 60px;
+    }
+
+    .text-display {
+        font-size: 0.9rem;
+    }
 }
